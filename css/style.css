@@ -205,6 +205,7 @@ p.merry .attraction-img {
 
 /* ---- 検索結果 ---- */
 .search-results {
+  display: none;
   position: absolute;
   top: calc(100% + 8px);
   right: 0;

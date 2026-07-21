@@ -126,30 +126,8 @@ function ensureSearchResults() {
 }
 
 function renderResults(items) {
-  const results = ensureSearchResults();
-  if (!results) {
-    return;
-  }
-
-  if (!items.length) {
-    results.innerHTML = '<p class="search-empty">該当するページはありませんでした。</p>';
-    return;
-  }
-
-  const listItems = items
-    .map((item) => {
-      return `<li><a href="${item.url}" data-search-url="${item.url}">${item.title}</a><span>${item.keywords.join(" / ")}</span></li>`;
-    })
-    .join("");
-
-  results.innerHTML = `<ul class="search-result-list">${listItems}</ul>`;
-
-  results.querySelectorAll("a[data-search-url]").forEach((link) => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      window.location.href = resolveSiteUrl(link.getAttribute("data-search-url"));
-    });
-  });
+  // サジェスト機能は無効です
+  return;
 }
 
 function checkKeyword() {
