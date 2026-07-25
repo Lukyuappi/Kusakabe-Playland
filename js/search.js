@@ -75,7 +75,7 @@ const SEARCH_ITEMS = [
   {
     title: "日下部創也の日記３",
     url: "diary/diary3.html",
-    keywords: ["あ"]
+    keywords: ["チューリップ", "チューリップ畑"]
   },
 ];
 
